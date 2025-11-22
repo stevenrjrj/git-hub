@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — My Site</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--text:#222;--muted:#6b7280;--radius:12px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+    .header{background:linear-gradient(90deg, rgba(11,116,222,0.06), transparent);padding:28px 16px;text-align:center}
+    .container{max-width:900px;margin:32px auto;padding:0 16px}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(27,31,35,0.06)}
+    h1{margin:0 0 8px;font-size:1.5rem}
+    .lead{margin:0 0 18px;color:var(--muted)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:640px){.form-grid{grid-template-columns:1fr}}
+    label{display:block;font-size:0.95rem;margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea{width:100%;padding:10px 12px;border:1px solid #e6e9ee;border-radius:10px;font-size:1rem;background:#fff}
+    textarea{min-height:140px;resize:vertical}
+    input:focus,textarea:focus{outline:4px solid rgba(11,116,222,0.08);border-color:var(--accent)}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn:active{transform:translateY(1px)}
+    .small{font-size:0.92rem;color:var(--muted)}
+    .nav{margin-top:8px}
+    .nav a{color:var(--accent);text-decoration:none;margin:0 8px;font-weight:500}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h2>Contact</h2>
+      <nav class="nav"><a href="index.html">Home</a> · <a href="about.html">About</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Get in touch</h1>
+      <p class="lead">Have a question or want to work together? Send a message and I'll reply within 1–2 business days.</p>
+      <form action="#" method="post" novalidate>
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+        </div>
+
+        <div style="margin-top:12px">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <div class="footer-row">
+          <p class="small">Prefer email? <a href="mailto:hello@example.com">hello@example.com</a></p>
+          <button class="btn" type="submit">Send message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
